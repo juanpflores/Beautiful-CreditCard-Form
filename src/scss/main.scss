@@ -1,0 +1,123 @@
+
+
+
+// Define all text with a color.
+html{
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background-color: #262d37;
+  font-family: 'Assistant', sans-serif;
+
+}
+
+// We define the size and color fo the background div.
+.background{
+	text-align: center;
+  
+}
+
+// Main container size and positioning
+.main-container{
+	display: inline-block;
+	text-align: left;
+	background-color: #38414e;
+	border-radius: 11px;
+	width: 70vw;
+	margin-top: 4rem;
+	position: relative;
+
+	&>.main-container-head{
+		height: 100%;
+		background-color: #59d9a4;
+		border-top-left-radius:1em;
+		border-top-right-radius:1em;
+	}
+
+	& > .main-container-body{
+		padding: 2em 5em;
+	}
+
+	& h1{
+	    padding-top: 2.5rem;	
+    	padding-left: 3rem;
+		margin-top: 0;
+    	margin-bottom: 1em;
+    	text-transform: uppercase;
+    	font-weight: 300;
+    	font-size: 2.2rem;
+	}
+	& h5{
+		margin-bottom: 0em;
+	    font-weight: 500;
+	    font-size: 1.2rem;
+	    text-transform: uppercase;
+	}
+	& input{
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid grey;
+		width: 100%;
+		height: 2rem;
+		font-size: 1.2rem;
+	    color: white;
+	    font-weight: 100;
+	    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    	transition: border 1s;
+
+	    &:focus{
+	    	outline: none;
+	    }
+
+	}
+
+	//Input text colors
+	.numero{
+		input{color: #59d9a4; &:focus{border-bottom: 1px solid #59d9a4;}}
+	}
+	.nombre{
+		input{color: #59d4d9; &:focus{border-bottom: 1px solid #59d4d9;}}
+	}
+	.expiracion{
+		input{color: #BA68C8; &:focus{border-bottom: 1px solid #BA68C8;}}
+	}
+	.codigo{
+		input{color: #F06292; &:focus{border-bottom: 1px solid #F06292;}}
+	}
+}
+.form-side{
+	width: 20vw;
+	float: left;
+}
+.image-side{
+    width: 32vw;
+    height: 30vh;
+	float: right;
+	background-color: white;
+    border-radius: .5rem;
+    position: absolute;
+    top: 55%;
+    right: 4rem;
+    transform: translateY(-50%);
+}
+button{
+	margin: 3rem 0;
+	background-color: transparent;
+	border: 1px solid grey;
+	color: grey;
+	border-radius: 2rem;
+	font-size: 1.2rem;
+	font-weight: 100;
+	padding: .5rem 6rem;
+
+	&:hover{
+		border: 1px solid white;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+
+
+
+
