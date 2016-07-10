@@ -123,6 +123,20 @@ html {
   .credit-card.neutral {
     background-color: #54637e; }
 
+/*
+===================
+Credit Card Styles
+===================
+*/
+.isVisa .credit-card {
+  background-color: #1d8a91; }
+
+.isMasterCard .credit-card {
+  background-color: #b478ab; }
+
+.isAMEX .credit-card {
+  background-color: #094c77; }
+
 button {
   margin: 3rem 0;
   background-color: transparent;

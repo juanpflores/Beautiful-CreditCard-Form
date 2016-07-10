@@ -7,7 +7,7 @@ $(document).ready(function() {
 $('#cc-number').keyup(function(){
 	var creditcard_number = $(this).val();
 	console.log(creditcard_number);
-	$('#credit-card-number').text(creditcard_number);
+	$('#credit-card-number').text(creditcard_number.replace(/(.{4})(.{4})(.{4})/,'$1 $2 $3 '));
 });
 
 // Copy Text to Name
@@ -36,3 +36,4 @@ $('#year').change(function(){
 	console.log(year);
 	$('#year-card').text(year);
 });
+

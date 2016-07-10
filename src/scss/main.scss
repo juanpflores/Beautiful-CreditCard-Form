@@ -13,7 +13,12 @@ $panel-body: #38414e;
 $small-title: #394255;
 // 		|- Neutral Credit Card
 $card-bgd-neutral: #54637e;
-
+// 		|- Visa Credit Card
+$card-bgd-visa: #1d8a91;
+// 		|- MasterCard Credit Card
+$card-bgd-mastercard: #b478ab;
+// 		|- AMEX Credit Card
+$card-bgd-amex: #094c77;
 
 
 // Define all text with a color.
@@ -175,7 +180,20 @@ html{
     	background-color: $card-bgd-neutral;
     }
 }
-
+/*
+===================
+Credit Card Styles
+===================
+*/
+.isVisa{
+	.credit-card{background-color: $card-bgd-visa}
+}
+.isMasterCard{
+	.credit-card{background-color: $card-bgd-mastercard}
+}
+.isAMEX{
+	.credit-card{background-color: $card-bgd-amex}
+}
 
 
 
