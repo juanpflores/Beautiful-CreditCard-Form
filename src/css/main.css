@@ -72,8 +72,8 @@ html {
   float: left; }
 
 .credit-card {
-  width: 30vw;
-  height: 26vh;
+  width: 400px;
+  height: 200px;
   float: right;
   background-color: white;
   border-radius: .5rem;
@@ -89,8 +89,33 @@ html {
     font-size: 2rem;
     text-shadow: 0px 2px 0 #000;
     margin-top: 10vh;
-    padding-left: 3vw;
+    text-align: center;
     letter-spacing: .3vw; }
+  .credit-card div.ce-container {
+    position: absolute;
+    right: 3em;
+    top: 8em; }
+    .credit-card div.ce-container p {
+      margin-top: 0;
+      text-align: center; }
+  .credit-card div.cvc-container {
+    position: absolute;
+    left: 3em;
+    top: 8em; }
+    .credit-card div.cvc-container p {
+      margin-top: 0;
+      text-align: center; }
+  .credit-card .ce-container > small, .credit-card .cvc-container > small {
+    color: #394255;
+    font-size: 1em;
+    font-weight: 500; }
+  .credit-card #card-holder {
+    position: absolute;
+    bottom: 0em;
+    left: 2em;
+    text-shadow: 0px 2px 0 #000;
+    font-size: 1.5em;
+    letter-spacing: .1em; }
   .credit-card.neutral {
     background-color: #54637e; }
 

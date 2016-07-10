@@ -9,8 +9,10 @@ $panel-header: #59d9a4;
 $panel-body: #38414e;
 
 //	|-Credit Card Variables
+// 	|-Font
+$small-title: #394255;
 // 		|- Neutral Credit Card
-$card-neutral-bgd: #54637e;
+$card-bgd-neutral: #54637e;
 
 
 
@@ -106,8 +108,9 @@ html{
 
 
 .credit-card{
-    width: 30vw;
-    height: 26vh;
+	// All the Credit Card Styles.
+    width: 400px;
+    height: 200px;
 	float: right;
 	background-color: white;
     border-radius: .5rem;
@@ -124,13 +127,47 @@ html{
     	font-size: 2rem;
    		text-shadow: 0px 2px 0 #000 ;
    		margin-top: 10vh;
-   		padding-left: 3vw;
+   		text-align: center;
    		letter-spacing: .3vw;
+
+    }
+    div.ce-container {
+		position: absolute;
+	    right: 3em;
+	    top: 8em;
+	    & p {
+			margin-top: 0;
+			text-align: center;
+	    }
+    }
+    div.cvc-container{
+		position: absolute;
+	    left: 3em;
+	    top: 8em;
+	    & p {
+			margin-top: 0;
+			text-align: center;
+	    }
+    }
+
+    .ce-container > small, .cvc-container > small{
+    	color: $small-title;
+    	font-size: 1em;
+    	font-weight: 500;
+    }
+    #card-holder{
+		position: absolute;
+		bottom: 0em;
+		left: 2em;
+		text-shadow: 0px 2px 0 #000 ;
+		font-size: 1.5em;
+		letter-spacing: .1em;
+
 
     }
 
     &.neutral{
-    	background-color: $card-neutral-bgd;
+    	background-color: $card-bgd-neutral;
     }
 }
 
