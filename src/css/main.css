@@ -50,6 +50,9 @@ html {
     transition: border 1s; }
     .main-container input:focus {
       outline: none; }
+    .main-container input[list] {
+      width: 30%;
+      text-align: center; }
   .main-container .numero input {
     color: #59d9a4; }
     .main-container .numero input:focus {
@@ -115,7 +118,8 @@ html {
     left: 2em;
     text-shadow: 0px 2px 0 #000;
     font-size: 1.5em;
-    letter-spacing: .1em; }
+    letter-spacing: .1em;
+    text-transform: capitalize; }
   .credit-card.neutral {
     background-color: #54637e; }
 
