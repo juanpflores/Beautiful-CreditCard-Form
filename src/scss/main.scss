@@ -1,12 +1,25 @@
 
 
+// Variables
+// 	|- General Variables
+$color-background: #262d37;
+
+// 	|- Panel Variables
+$panel-header: #59d9a4;
+$panel-body: #38414e;
+
+//	|-Credit Card Variables
+// 		|- Neutral Credit Card
+$card-neutral-bgd: #54637e;
+
+
 
 // Define all text with a color.
 html{
   color: white;
   width: 100vw;
   height: 100vh;
-  background-color: #262d37;
+  background-color: $color-background;
   font-family: 'Assistant', sans-serif;
 
 }
@@ -21,7 +34,7 @@ html{
 .main-container{
 	display: inline-block;
 	text-align: left;
-	background-color: #38414e;
+	background-color: $panel-body;
 	border-radius: 11px;
 	width: 70vw;
 	margin-top: 4rem;
@@ -29,7 +42,7 @@ html{
 
 	&>.main-container-head{
 		height: 100%;
-		background-color: #59d9a4;
+		background-color: $panel-header;
 		border-top-left-radius:1em;
 		border-top-right-radius:1em;
 	}
@@ -89,9 +102,12 @@ html{
 	width: 20vw;
 	float: left;
 }
-.image-side{
-    width: 32vw;
-    height: 30vh;
+
+
+
+.credit-card{
+    width: 30vw;
+    height: 26vh;
 	float: right;
 	background-color: white;
     border-radius: .5rem;
@@ -99,7 +115,28 @@ html{
     top: 55%;
     right: 4rem;
     transform: translateY(-50%);
+    padding: 1rem;
+    & > img{
+		height: 35px;
+		float: right;
+    }
+    & > #credit-card-number{
+    	font-size: 2rem;
+   		text-shadow: 0px 2px 0 #000 ;
+   		margin-top: 10vh;
+   		padding-left: 3vw;
+   		letter-spacing: .3vw;
+
+    }
+
+    &.neutral{
+    	background-color: $card-neutral-bgd;
+    }
 }
+
+
+
+
 button{
 	margin: 3rem 0;
 	background-color: transparent;
