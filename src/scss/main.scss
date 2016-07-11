@@ -3,20 +3,24 @@
 // Variables
 // 	|- General Variables
 $color-background: #262d37;
-
+//	|	
 // 	|- Panel Variables
 $panel-header: #59d9a4;
 $panel-body: #38414e;
-
+// 	|
 //	|-Credit Card Variables
-// 	|-Font
+// 	|-Fonts
 $small-title: #394255;
+// 		|
 // 		|- Neutral Credit Card
 $card-bgd-neutral: #54637e;
+// 		|
 // 		|- Visa Credit Card
 $card-bgd-visa: #1d8a91;
+// 		|
 // 		|- MasterCard Credit Card
 $card-bgd-mastercard: #b478ab;
+// 		|
 // 		|- AMEX Credit Card
 $card-bgd-amex: #094c77;
 
@@ -95,7 +99,11 @@ html{
 
 	}
 
-	//Input text colors
+/*
+===================
+Input Colors
+===================
+*/
 	.numero{
 		input{color: #59d9a4; &:focus{border-bottom: 1px solid #59d9a4;}}
 	}
@@ -113,11 +121,14 @@ html{
 	width: 20vw;
 	float: left;
 }
-
+/*
+===========================
+Credit Card General Styles
+===========================
+*/
 
 
 .credit-card{
-	// All the Credit Card Styles.
     width: 400px;
     height: 200px;
 	float: right;
@@ -171,32 +182,43 @@ html{
 		text-shadow: 0px 2px 0 #000 ;
 		font-size: 1.5em;
 		letter-spacing: .1em;
-		text-transform: capitalize;
+		text-transform: uppercase;
 
 
     }
+/*
+=================================
+Credit Card Specific Card Styles
+=================================
+*/
 
     &.neutral{
     	background-color: $card-bgd-neutral;
     }
+    &.isVisa{
+	background-color: $card-bgd-visa;
+	}
+	&.isMasterCard{
+		background-image: url("../img/MasterCard.png");
+		background-position-x: -56px;
+    	background-position-y: -100px;
+		// background-color: $card-bgd-mastercard;
+	}
+	&.isAMEX{
+	    background-image: url("../img/AMEX.gif");
+	    background-position-x: -24px;
+	    background-position-y: -30px;
+	    background-size: 467px;
+	}
 }
+
+
+
 /*
-===================
-Credit Card Styles
-===================
+====================
+Submit Button Styles
+====================
 */
-.isVisa{
-	.credit-card{background-color: $card-bgd-visa}
-}
-.isMasterCard{
-	.credit-card{background-color: $card-bgd-mastercard}
-}
-.isAMEX{
-	.credit-card{background-color: $card-bgd-amex}
-}
-
-
-
 button{
 	margin: 3rem 0;
 	background-color: transparent;

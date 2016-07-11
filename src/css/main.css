@@ -15,7 +15,12 @@ html {
   border-radius: 11px;
   width: 70vw;
   margin-top: 4rem;
-  position: relative; }
+  position: relative;
+  /*
+  ===================
+  Input Colors
+  ===================
+  */ }
   .main-container > .main-container-head {
     height: 100%;
     background-color: #59d9a4;
@@ -74,6 +79,11 @@ html {
   width: 20vw;
   float: left; }
 
+/*
+===========================
+Credit Card General Styles
+===========================
+*/
 .credit-card {
   width: 400px;
   height: 200px;
@@ -84,7 +94,12 @@ html {
   top: 55%;
   right: 4rem;
   transform: translateY(-50%);
-  padding: 1rem; }
+  padding: 1rem;
+  /*
+  =================================
+  Credit Card Specific Card Styles
+  =================================
+  */ }
   .credit-card > img {
     height: 35px;
     float: right; }
@@ -119,24 +134,26 @@ html {
     text-shadow: 0px 2px 0 #000;
     font-size: 1.5em;
     letter-spacing: .1em;
-    text-transform: capitalize; }
+    text-transform: uppercase; }
   .credit-card.neutral {
     background-color: #54637e; }
+  .credit-card.isVisa {
+    background-color: #1d8a91; }
+  .credit-card.isMasterCard {
+    background-image: url("../img/MasterCard.png");
+    background-position-x: -56px;
+    background-position-y: -100px; }
+  .credit-card.isAMEX {
+    background-image: url("../img/AMEX.gif");
+    background-position-x: -24px;
+    background-position-y: -30px;
+    background-size: 467px; }
 
 /*
-===================
-Credit Card Styles
-===================
+====================
+Submit Button Styles
+====================
 */
-.isVisa .credit-card {
-  background-color: #1d8a91; }
-
-.isMasterCard .credit-card {
-  background-color: #b478ab; }
-
-.isAMEX .credit-card {
-  background-color: #094c77; }
-
 button {
   margin: 3rem 0;
   background-color: transparent;
