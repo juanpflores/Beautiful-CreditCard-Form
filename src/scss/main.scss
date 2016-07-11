@@ -3,15 +3,26 @@
 // Variables
 // 	|- General Variables
 $color-background: #262d37;
-
+//	|	
 // 	|- Panel Variables
 $panel-header: #59d9a4;
 $panel-body: #38414e;
-
+// 	|
 //	|-Credit Card Variables
+// 	|-Fonts
+$small-title: #394255;
+// 		|
 // 		|- Neutral Credit Card
-$card-neutral-bgd: #54637e;
-
+$card-bgd-neutral: #54637e;
+// 		|
+// 		|- Visa Credit Card
+$card-bgd-visa: #1d8a91;
+// 		|
+// 		|- MasterCard Credit Card
+$card-bgd-mastercard: #b478ab;
+// 		|
+// 		|- AMEX Credit Card
+$card-bgd-amex: #094c77;
 
 
 // Define all text with a color.
@@ -81,10 +92,18 @@ html{
 	    &:focus{
 	    	outline: none;
 	    }
+	    &[list]{
+	    	width: 30%;
+	    	text-align: center;
+	    }
 
 	}
 
-	//Input text colors
+/*
+===================
+Input Colors
+===================
+*/
 	.numero{
 		input{color: #59d9a4; &:focus{border-bottom: 1px solid #59d9a4;}}
 	}
@@ -102,12 +121,16 @@ html{
 	width: 20vw;
 	float: left;
 }
-
+/*
+===========================
+Credit Card General Styles
+===========================
+*/
 
 
 .credit-card{
-    width: 30vw;
-    height: 26vh;
+    width: 400px;
+    height: 200px;
 	float: right;
 	background-color: white;
     border-radius: .5rem;
@@ -124,19 +147,78 @@ html{
     	font-size: 2rem;
    		text-shadow: 0px 2px 0 #000 ;
    		margin-top: 10vh;
-   		padding-left: 3vw;
+   		text-align: center;
    		letter-spacing: .3vw;
 
     }
+    div.ce-container {
+		position: absolute;
+	    right: 3em;
+	    top: 8em;
+	    & p {
+			margin-top: 0;
+			text-align: center;
+	    }
+    }
+    div.cvc-container{
+		position: absolute;
+	    left: 3em;
+	    top: 8em;
+	    & p {
+			margin-top: 0;
+			text-align: center;
+	    }
+    }
+
+    .ce-container > small, .cvc-container > small{
+    	color: $small-title;
+    	font-size: 1em;
+    	font-weight: 500;
+    }
+    #card-holder{
+		position: absolute;
+		bottom: 0em;
+		left: 2em;
+		text-shadow: 0px 2px 0 #000 ;
+		font-size: 1.5em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+
+
+    }
+/*
+=================================
+Credit Card Specific Card Styles
+=================================
+*/
 
     &.neutral{
-    	background-color: $card-neutral-bgd;
+    	background-color: $card-bgd-neutral;
     }
+    &.isVisa{
+	background-color: $card-bgd-visa;
+	}
+	&.isMasterCard{
+		background-image: url("../img/MasterCard.png");
+		background-position-x: -56px;
+    	background-position-y: -100px;
+		// background-color: $card-bgd-mastercard;
+	}
+	&.isAMEX{
+	    background-image: url("../img/AMEX.gif");
+	    background-position-x: -24px;
+	    background-position-y: -30px;
+	    background-size: 467px;
+	}
 }
 
 
 
-
+/*
+====================
+Submit Button Styles
+====================
+*/
 button{
 	margin: 3rem 0;
 	background-color: transparent;
