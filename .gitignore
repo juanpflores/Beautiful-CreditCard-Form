@@ -1,5 +1,10 @@
 .sass-cache/
 *.css.map
 
-#Mac OS
-.DS_Store
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
