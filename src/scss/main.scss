@@ -19,17 +19,17 @@ $card-bgd-neutral: #54637e;
 $card-bgd-visa: #1d8a91;
 // 		|
 // 		|- MasterCard Credit Card
-$card-bgd-mastercard: #b478ab;
+$card-bgd-mastercard: #0277BD;
 // 		|
 // 		|- AMEX Credit Card
-$card-bgd-amex: #094c77;
+$card-bgd-amex: #00897B;
 
 
 // Define all text with a color.
 html{
   color: white;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: $color-background;
   font-family: 'Assistant', sans-serif;
 
@@ -199,13 +199,14 @@ Credit Card Specific Card Styles
 	background-color: $card-bgd-visa;
 	}
 	&.isMasterCard{
-		background-image: url("../img/MasterCard.png");
+		// background-image: url("../img/MasterCard.png");
 		background-position-x: -56px;
     	background-position-y: -100px;
-		// background-color: $card-bgd-mastercard;
+		background-color: $card-bgd-mastercard;
 	}
 	&.isAMEX{
-	    background-image: url("../img/AMEX.gif");
+	    // background-image: url("../img/AMEX.gif");
+	    background-color: $card-bgd-amex;
 	    background-position-x: -24px;
 	    background-position-y: -30px;
 	    background-size: 467px;

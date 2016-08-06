@@ -1,7 +1,7 @@
 html {
   color: white;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #262d37;
   font-family: 'Assistant', sans-serif; }
 
@@ -140,11 +140,11 @@ Credit Card General Styles
   .credit-card.isVisa {
     background-color: #1d8a91; }
   .credit-card.isMasterCard {
-    background-image: url("../img/MasterCard.png");
     background-position-x: -56px;
-    background-position-y: -100px; }
+    background-position-y: -100px;
+    background-color: #0277BD; }
   .credit-card.isAMEX {
-    background-image: url("../img/AMEX.gif");
+    background-color: #00897B;
     background-position-x: -24px;
     background-position-y: -30px;
     background-size: 467px; }
