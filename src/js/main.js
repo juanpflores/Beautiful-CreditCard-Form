@@ -53,12 +53,12 @@ function cardStylist(ccnumber){
 				$(".credit-card").removeClass("neutral isMasterCard isVisa").addClass("isAMEX");
 				$("#comercial-network-logo").attr("src", "./src/img/amex-logo.png");
 				console.log("cardStylist said it was: AMEX");
-			} 
+			}
 				else if (ccnumber.charAt(0)==2 || ccnumber.charAt(0)==5) {
 					$(".credit-card").removeClass("neutral isAMEX isVisa").addClass("isMasterCard");
 					console.log("cardStylist said it was: MasterCard");
 					$("#comercial-network-logo").attr("src", "./src/img/MasterCard_Logo.png");
-				} 
+				}
 					else{
 						$(".credit-card").removeClass("isAMEX isMasterCard isVisa").addClass("neutral");
 						console.log("cardStylist said it was not found pal!");
@@ -85,9 +85,3 @@ $('#submit').click(function(e){
 		)
 	};
 })
-
-
-
-
-
-

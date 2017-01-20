@@ -1,62 +1,60 @@
 html {
   color: white;
-  width: 100vw;
-  height: 120vh;
   background-color: #262d37;
   font-family: 'Assistant', sans-serif; }
 
 .background {
-  text-align: center; }
+  text-align: center;
+  padding: 1rem; }
 
+@media screen and (min-width: 993px) {
+  .main-container {
+    margin-top: 12rem !important; }
+
+  .main-container-body {
+    padding: 0 1rem; }
+
+  .credit-card {
+    margin-top: 5rem !important; } }
 .main-container {
-  display: inline-block;
   text-align: left;
   background-color: #38414e;
   border-radius: 11px;
-  width: 70vw;
-  margin-top: 4rem;
-  position: relative;
+  max-width: 1000px;
+  margin: 7rem auto 0 auto !important;
   /*
   ===================
   Input Colors
   ===================
   */ }
   .main-container > .main-container-head {
-    height: 100%;
     background-color: #59d9a4;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em; }
   .main-container > .main-container-body {
-    padding: 2em 5em; }
+    padding: 1rem .5rem; }
   .main-container h1 {
-    padding-top: 2.5rem;
-    padding-left: 3rem;
-    margin-top: 0;
-    margin-bottom: 1em;
+    padding: 1rem;
+    margin: 0;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 2.2rem; }
   .main-container h5 {
-    margin-bottom: 0em;
+    margin-bottom: .1em;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase; }
   .main-container input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid grey;
-    width: 100%;
     height: 2rem;
-    font-size: 1.2rem;
     color: white;
     font-weight: 100;
-    -webkit-transition: width 1s;
-    /* For Safari 3.1 to 6.0 */
     transition: border 1s; }
     .main-container input:focus {
       outline: none; }
     .main-container input[list] {
-      width: 30%;
       text-align: center; }
   .main-container .numero input {
     color: #59d9a4; }
@@ -75,9 +73,10 @@ html {
     .main-container .codigo input:focus {
       border-bottom: 1px solid #F06292; }
 
-.form-side {
-  width: 20vw;
-  float: left; }
+.form-side form {
+  text-align: center; }
+  .form-side form div {
+    text-align: left; }
 
 /*
 ===========================
@@ -85,16 +84,8 @@ Credit Card General Styles
 ===========================
 */
 .credit-card {
-  width: 400px;
-  height: 200px;
-  float: right;
   background-color: white;
   border-radius: .5rem;
-  position: absolute;
-  top: 55%;
-  right: 4rem;
-  transform: translateY(-50%);
-  padding: 1rem;
   /*
   =================================
   Credit Card Specific Card Styles
@@ -102,39 +93,31 @@ Credit Card General Styles
   */ }
   .credit-card > img {
     height: 35px;
-    float: right; }
+    margin: 1rem .5rem; }
   .credit-card > #credit-card-number {
-    font-size: 2rem;
     text-shadow: 0px 2px 0 #000;
-    margin-top: 10vh;
     text-align: center;
-    letter-spacing: .3vw; }
-  .credit-card div.ce-container {
-    position: absolute;
-    right: 3em;
-    top: 8em; }
-    .credit-card div.ce-container p {
-      margin-top: 0;
-      text-align: center; }
-  .credit-card div.cvc-container {
-    position: absolute;
-    left: 3em;
-    top: 8em; }
-    .credit-card div.cvc-container p {
-      margin-top: 0;
-      text-align: center; }
+    letter-spacing: .3vw;
+    font-size: 1.5rem;
+    margin: 0; }
+  .credit-card div.ce-container small {
+    font-size: 1rem; }
+  .credit-card div.ce-container p {
+    text-align: center; }
+  .credit-card div.cvc-container small {
+    font-size: 1rem; }
+  .credit-card div.cvc-container p {
+    text-align: center; }
   .credit-card .ce-container > small, .credit-card .cvc-container > small {
     color: #394255;
-    font-size: 1em;
     font-weight: 500; }
   .credit-card #card-holder {
-    position: absolute;
-    bottom: 0em;
-    left: 2em;
     text-shadow: 0px 2px 0 #000;
-    font-size: 1.5em;
     letter-spacing: .1em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0; }
   .credit-card.neutral {
     background-color: #54637e; }
   .credit-card.isVisa {
@@ -154,18 +137,19 @@ Credit Card General Styles
 Submit Button Styles
 ====================
 */
-button {
-  margin: 3rem 0;
-  background-color: transparent;
-  border: 1px solid grey;
-  color: grey;
-  border-radius: 2rem;
-  font-size: 1.2rem;
-  font-weight: 100;
-  padding: .5rem 6rem; }
-  button:hover {
-    border: 1px solid white;
-    color: white;
-    cursor: pointer; }
+.submit-container {
+  text-align: center !important; }
+  .submit-container button {
+    margin: 1rem 0;
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 2rem;
+    font-weight: 100;
+    padding: .5rem 6rem; }
+    .submit-container button:hover {
+      border: 1px solid white;
+      color: white;
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

@@ -3,7 +3,7 @@
 // Variables
 // 	|- General Variables
 $color-background: #262d37;
-//	|	
+//	|
 // 	|- Panel Variables
 $panel-header: #59d9a4;
 $panel-body: #38414e;
@@ -28,72 +28,71 @@ $card-bgd-amex: #00897B;
 // Define all text with a color.
 html{
   color: white;
-  width: 100vw;
-  height: 120vh;
   background-color: $color-background;
   font-family: 'Assistant', sans-serif;
-
 }
 
 // We define the size and color fo the background div.
 .background{
 	text-align: center;
-  
+    padding: 1rem;
 }
 
 // Main container size and positioning
+
+@media screen and (min-width: 993px) {
+    .main-container {
+        margin-top: 12rem !important;
+    }
+    .main-container-body{
+        padding: 0 1rem;
+    }
+    .credit-card {
+        margin-top: 5rem !important;
+    }
+}
 .main-container{
-	display: inline-block;
 	text-align: left;
 	background-color: $panel-body;
 	border-radius: 11px;
-	width: 70vw;
-	margin-top: 4rem;
-	position: relative;
+    max-width: 1000px;
+    margin: 7rem auto 0 auto !important;
 
 	&>.main-container-head{
-		height: 100%;
 		background-color: $panel-header;
 		border-top-left-radius:1em;
 		border-top-right-radius:1em;
 	}
 
 	& > .main-container-body{
-		padding: 2em 5em;
+        padding: 1rem .5rem;
 	}
 
 	& h1{
-	    padding-top: 2.5rem;	
-    	padding-left: 3rem;
-		margin-top: 0;
-    	margin-bottom: 1em;
+        padding: 1rem;
+		margin: 0;
     	text-transform: uppercase;
     	font-weight: 300;
     	font-size: 2.2rem;
 	}
 	& h5{
-		margin-bottom: 0em;
+		margin-bottom: .1em;
 	    font-weight: 500;
-	    font-size: 1.2rem;
+	    font-size: 1.5rem;
 	    text-transform: uppercase;
 	}
 	& input{
 		background-color: transparent;
 		border: none;
 		border-bottom: 1px solid grey;
-		width: 100%;
 		height: 2rem;
-		font-size: 1.2rem;
 	    color: white;
 	    font-weight: 100;
-	    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
     	transition: border 1s;
-
 	    &:focus{
 	    	outline: none;
 	    }
 	    &[list]{
-	    	width: 30%;
 	    	text-align: center;
 	    }
 
@@ -118,8 +117,14 @@ Input Colors
 	}
 }
 .form-side{
-	width: 20vw;
-	float: left;
+	//width: 20vw;
+    & form {
+        text-align: center;
+        & div {
+            text-align: left;
+        }
+
+    }
 }
 /*
 ===========================
@@ -129,61 +134,50 @@ Credit Card General Styles
 
 
 .credit-card{
-    width: 400px;
-    height: 200px;
-	float: right;
 	background-color: white;
     border-radius: .5rem;
-    position: absolute;
-    top: 55%;
-    right: 4rem;
-    transform: translateY(-50%);
-    padding: 1rem;
     & > img{
 		height: 35px;
-		float: right;
+        margin: 1rem .5rem;
     }
     & > #credit-card-number{
-    	font-size: 2rem;
    		text-shadow: 0px 2px 0 #000 ;
-   		margin-top: 10vh;
    		text-align: center;
    		letter-spacing: .3vw;
+        font-size: 1.5rem;
+        margin: 0;
 
     }
     div.ce-container {
-		position: absolute;
-	    right: 3em;
-	    top: 8em;
+        & small {
+            font-size: 1rem;
+        }
 	    & p {
-			margin-top: 0;
 			text-align: center;
 	    }
     }
     div.cvc-container{
-		position: absolute;
-	    left: 3em;
-	    top: 8em;
+        & small {
+            font-size: 1rem;
+        }
 	    & p {
-			margin-top: 0;
 			text-align: center;
 	    }
     }
 
+
     .ce-container > small, .cvc-container > small{
     	color: $small-title;
-    	font-size: 1em;
+    	//font-size: 1em;
     	font-weight: 500;
     }
     #card-holder{
-		position: absolute;
-		bottom: 0em;
-		left: 2em;
 		text-shadow: 0px 2px 0 #000 ;
-		font-size: 1.5em;
 		letter-spacing: .1em;
 		text-transform: uppercase;
-
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 0;
 
     }
 /*
@@ -218,24 +212,21 @@ Credit Card Specific Card Styles
 Submit Button Styles
 ====================
 */
-button{
-	margin: 3rem 0;
-	background-color: transparent;
-	border: 1px solid grey;
-	color: grey;
-	border-radius: 2rem;
-	font-size: 1.2rem;
-	font-weight: 100;
-	padding: .5rem 6rem;
+.submit-container {
+    text-align: center !important;
+    & button{
+        margin: 1rem 0;
+    	background-color: transparent;
+    	border: 1px solid grey;
+    	color: grey;
+    	border-radius: 2rem;
+    	font-weight: 100;
+    	padding: .5rem 6rem;
 
-	&:hover{
-		border: 1px solid white;
-		color: white;
-		cursor: pointer;
-	}
+    	&:hover{
+    		border: 1px solid white;
+    		color: white;
+    		cursor: pointer;
+    	}
+    }
 }
-
-
-
-
-
